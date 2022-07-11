@@ -36,5 +36,6 @@ jobs:
     steps:
       - git_commit: |
           git clone https://github.com/sskimin4/quickstart-generic.git
-          git commit -o . -m "Commit ReadMe $(git --git-dir quickstart-generic/.git rev-parse --short HEAD)"
+          echo "Readme Change By Commit $(git --git-dir quickstart-generic/.git rev-parse --short HEAD)" > README.md
+          git commit -o . -m "Commit ReadMe"
           git push "https://${USER_NAME}:${PASSWORD}@github.com/sskimin4/quick-start-generic-child.git"
