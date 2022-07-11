@@ -34,6 +34,6 @@ jobs:
     requires: [~sd@1:second_job]
     # Steps is the list of commands to execute.
     steps:
-      git_commit: |
-        git clone https://github.com/sskimin4/quickstart-generic.git
-        git --git-dir quickstart-generic/.git rev-parse --short HEAD
+      - git_commit: |
+          git clone https://github.com/sskimin4/quickstart-generic.git
+          git --git-dir quickstart-generic/.git rev-parse --short HEAD
